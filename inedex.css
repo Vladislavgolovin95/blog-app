@@ -39,7 +39,7 @@ input {
     padding: 0 262px 211px 32px;
 }
 
-.addButton {
+.addPostBtn {
     padding: 9px 144px 12px 126px;
     border: none;
     font-size: 32px;
@@ -48,10 +48,36 @@ input {
     color: #FFFFFF;
     background-color: #0094FF;
 }
-.addButton:hover {
+.addPostBtn:hover {
     opacity: 0.7;
 }
 
-.ribbon__text {
-    border: none;
+.ribbon__posts {
+    font-size: 32px;
+    line-height: 39px;
+    color: #979797;
+}
+
+.jsPost__date {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 25px;
+    line-height: 30px;
+    color: #0094FF;
+}
+.jsPost__title {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    color: #000000;
+}
+.jsPost__text {
+    display: block;
+    margin-bottom: 50px;
+    width: 500px;
+    font-size: 25px;
+    line-height: 30px;
+    color: #000000;
 }

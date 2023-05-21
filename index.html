@@ -13,25 +13,23 @@
     <div class="blog">
         <div class="post">
             <h2>Новый пост</h2>
-            <input 
+            <input
+                id="inputTitlePost"
                 class="post__text_title"
                 type="text"
                 placeholder="Заголовок"
             >
             <input
+                id="inputTextPost"
                 class="post__text" 
                 type="text"
                 placeholder="Напиши пост"    
             >
-            <button id="addButton" class="addButton">Опубликовать</button>
+            <button id="addPostBtn" class="addPostBtn">Опубликовать</button>
         </div>
         <div class="ribbon">
         <h2>Лента</h2>
-        <input 
-            class="ribbon__text"
-            type="text"
-            placeholder="Тут пока пусто..."
-            >
+        <div id="ribbonPosts" class="ribbon__posts">Тут пока пусто...</div>
         </div>
     </div>
     <script src="index.js"></script>
