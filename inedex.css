@@ -1,0 +1,57 @@
+body {
+    margin: 0 auto;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+h2 {
+    margin-bottom: 60px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    color: #000000;
+}
+
+input {
+    font-size: 32px;
+    line-height: 39px;
+}
+
+.blog {
+    margin: 100px auto;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+}
+.post__text_title {
+    margin-bottom: 30px;
+    padding: 11px 316px 10px 20px;
+}
+.post__text {
+    margin-bottom: 30px;
+    padding: 0 262px 211px 32px;
+}
+
+.addButton {
+    padding: 9px 144px 12px 126px;
+    border: none;
+    font-size: 32px;
+    line-height: 39px;
+    cursor: pointer;
+    color: #FFFFFF;
+    background-color: #0094FF;
+}
+.addButton:hover {
+    opacity: 0.7;
+}
+
+.ribbon__text {
+    border: none;
+}
