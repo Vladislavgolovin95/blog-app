@@ -21,6 +21,7 @@ textarea {
 }
 
 .blog {
+    position: relative;
     margin: 100px auto;
     max-width: 1100px;
     display: flex;
@@ -37,9 +38,21 @@ textarea {
     padding: 11px 20px 10px 20px;
     max-width: 653px;
 }
+.resultTitlePost {
+    position: absolute;
+    left: 430px;
+    top: 90px;
+    color: #0094FF;
+}
 .post__text {
     margin-bottom: 30px;
     padding: 10px;
+}
+.resultTextPost {
+    position: absolute;
+    left: 430px;
+    top: 185px;
+    color: #0094FF;
 }
 
 .addPostBtn {
@@ -97,4 +110,46 @@ textarea {
 .validationMessagePostTitle,
 .validationMessagePostText {
     display: none;
+}
+
+@media (max-width: 767px) {
+    .blog {
+        margin: 50px auto;
+        width: 100%;
+        padding: 20px;
+        flex-direction: column;
+        gap: 50px;
+    }
+    h2 {
+        text-align: center;
+    }
+    input,
+    textarea {
+    font-size: 24px;
+    line-height: 30px;
+}
+    .post__text_title {
+        margin-bottom: 30px;
+        padding: 5px 10px 5px 10px;
+        width: 100%;
+    }
+    .resultTitlePost {
+        position: absolute;
+        left: 640px;
+        top: 111px;
+        color: #0094FF;
+    }
+    .post__text {
+        margin-bottom: 30px;
+        padding: 5px;
+    }
+    .resultTextPost {
+        position: absolute;
+        left: 680px;
+        top: 185px;
+        color: #0094FF;
+    }
+    .addPostBtn {
+        margin-bottom: 10px;
+    }
 }
