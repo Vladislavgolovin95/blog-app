@@ -14,14 +14,13 @@ h2 {
     color: #000000;
 }
 
-input,
 textarea {
     font-size: 32px;
     line-height: 39px;
+    overflow: hidden;
 }
 
 .blog {
-    position: relative;
     margin: 100px auto;
     max-width: 1100px;
     display: flex;
@@ -34,29 +33,36 @@ textarea {
     flex-direction: column;
 }
 .post__text_title {
-    margin-bottom: 30px;
-    padding: 11px 20px 10px 20px;
-    max-width: 653px;
+    display: block;
+    margin-bottom: 15px;
+    min-height: 60px;
+    padding: 5px;
+    resize: none;
+    outline: none;
 }
 .resultTitlePost {
-    position: absolute;
-    left: 430px;
-    top: 90px;
+    margin-top: -9px;
+    width: 100%;
+    text-align: right;
     color: #0094FF;
 }
 .post__text {
-    margin-bottom: 30px;
+    display: block;
+    margin:30px 0 30px;
+    height: 100%;
     padding: 10px;
+    resize: none;
+    outline: none;
 }
 .resultTextPost {
-    position: absolute;
-    left: 430px;
-    top: 185px;
+    margin-top: -25px;
+    width: 100%;
+    text-align: right;
     color: #0094FF;
 }
 
 .addPostBtn {
-    margin-bottom: 30px;
+    margin: 40px 0 10px;
     padding: 9px 144px 12px 126px;
     border: none;
     font-size: 32px;
@@ -70,6 +76,7 @@ textarea {
 }
 
 .ribbon__posts {
+    width: 100%;
     font-size: 32px;
     line-height: 39px;
     color: #979797;
@@ -93,10 +100,11 @@ textarea {
 .jsPost__text {
     display: block;
     margin-bottom: 50px;
-    width: 500px;
+    width: 100%;
     font-size: 25px;
     line-height: 30px;
     color: #000000;
+    word-wrap: break-word;
 }
 
 .validationMessagePostTitle_active,
@@ -123,31 +131,18 @@ textarea {
     h2 {
         text-align: center;
     }
-    input,
     textarea {
-    font-size: 24px;
-    line-height: 30px;
+        font-size: 24px;
+        line-height: 30px;
 }
     .post__text_title {
         margin-bottom: 30px;
-        padding: 5px 10px 5px 10px;
         width: 100%;
-    }
-    .resultTitlePost {
-        position: absolute;
-        left: 640px;
-        top: 111px;
-        color: #0094FF;
     }
     .post__text {
         margin-bottom: 30px;
+        width: 100%;
         padding: 5px;
-    }
-    .resultTextPost {
-        position: absolute;
-        left: 680px;
-        top: 185px;
-        color: #0094FF;
     }
     .addPostBtn {
         margin-bottom: 10px;
