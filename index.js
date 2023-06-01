@@ -7,8 +7,8 @@ const validationMessagePostText = document.getElementById('validationMessagePost
 const resultTitlePost = document.getElementById('resultTitlePost');
 const resultTextPost = document.getElementById('resultTextPost');
 
-const limitTitlePost = 100;
-const limitTextPost = 200;
+const limitTitlePost = 10;
+const limitTextPost = 20;
 
 
 const posts = [];
@@ -17,8 +17,6 @@ addPostBtnNode.addEventListener('click', function() {
     const postFromUser = getPostFromUser();
     addPost(postFromUser);
     renderPosts();
-    clearFields()
-    clearResult()
 });
 
 function validateTitle() {
@@ -67,8 +65,8 @@ function getPostFromUser() {
     const title = inputTitleNode.value;
     const text = inputTextNode.value;
 
-    if (title == 0 && text == 0) {
-        return; 
+    if (title, text == '') {
+        return;
     }
 
     return {
@@ -90,12 +88,15 @@ function clearResult() {
 function addPost({title, text}) {
     const currentDate = new Date();
     const dateTime = `${currentDate.toLocaleDateString()} ${currentDate.getHours()}:${currentDate.getMinutes()}`;
-    
+
     posts.push({
         dateTime,
         title: title,
         text: text
     });
+
+    clearFields();
+    clearResult();
 }
 
 function getPosts() {
