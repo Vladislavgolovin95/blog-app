@@ -7,8 +7,8 @@ const validationMessagePostText = document.getElementById('validationMessagePost
 const resultTitlePost = document.getElementById('resultTitlePost');
 const resultTextPost = document.getElementById('resultTextPost');
 
-const limitTitlePost = 10;
-const limitTextPost = 20;
+const limitTitlePost = 5;
+const limitTextPost = 10;
 
 
 const posts = [];
@@ -30,6 +30,7 @@ function validateTitle() {
 
         if (charactersText > limitTitlePost) {
             validationMessagePostTitle.className = 'validationMessagePostTitle_active';
+            validationMessagePostTitle.innerText = `Заголовок не должен превышать ${limitTitlePost} символов`;
             addPostBtnNode.disabled = true;
         } else {
             validationMessagePostTitle.className = 'validationMessagePostTitle';
@@ -51,6 +52,7 @@ function validateText() {
 
         if (charactersText > limitTextPost ) {
             validationMessagePostText.className = 'validationMessagePostText_active';
+            validationMessagePostText.innerText = `Пост не должен содержать более ${limitTextPost} символов`
             addPostBtnNode.disabled = true;
         } else {
             validationMessagePostText.className = 'validationMessagePostText';

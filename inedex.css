@@ -144,6 +144,9 @@ textarea {
         margin-bottom: 30px;
         width: 100%;
     }
+    .resultTitlePost {
+        margin-top: -25px;
+    }
     .post__text {
         margin-bottom: 30px;
         width: 100%;
@@ -154,8 +157,9 @@ textarea {
         padding: 5px;
         font-size: 20px;
         line-height: 39px;
-        cursor: pointer;
-        color: #FFFFFF;
-        background-color: #0094FF;
+    }
+    .ribbon__posts {
+        font-size: 20px;
+        line-height: 39px;
     }
 }
