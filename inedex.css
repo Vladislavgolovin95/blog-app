@@ -112,16 +112,14 @@ textarea {
     word-wrap: break-word;
 }
 
-.validationMessagePostTitle_active,
-.validationMessagePostText_active {
+.validationMessage_active{
     display: block;
     font-size: 20px;
     line-height: 30px;
     color: #FF0000;
 }
 
-.validationMessagePostTitle,
-.validationMessagePostText {
+.validationMessage{
     display: none;
 }
 

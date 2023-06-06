@@ -19,55 +19,93 @@ addPostBtnNode.addEventListener('click', function() {
     renderPosts();
 });
 
-function validateTitle() {
+// function validateTitle() {
+//     resultTitlePost.textContent = 0 + '/' + limitTitlePost;
+
+//     inputTitleNode.addEventListener('input', function(event) {
+//         const presentValue = event.target.value;
+//         const charactersText = presentValue.length;
+
+//         resultTitlePost.textContent = charactersText + '/' + limitTitlePost;
+
+//         if (charactersText > limitTitlePost) {
+//             validationMessagePostTitle.className = 'validationMessagePostTitle_active';
+//             validationMessagePostTitle.innerText = `Заголовок не должен превышать ${limitTitlePost} символов`;
+//             addPostBtnNode.disabled = true;
+//         } else {
+//             validationMessagePostTitle.className = 'validationMessagePostTitle';
+//             addPostBtnNode.disabled = false;
+//         }
+//     });
+// }
+
+// validateTitle();
+
+// function validateText() {
+//     resultTextPost.textContent = 0 + '/' + limitTextPost;
+
+//     inputTextNode.addEventListener('input', function(event) {
+//         const presentValue = event.target.value;
+//         const charactersText = presentValue.length;
+
+//         resultTextPost.textContent = charactersText + '/' + limitTextPost;
+
+//         if (charactersText > limitTextPost ) {
+//             validationMessagePostText.className = 'validationMessagePostText_active';
+//             validationMessagePostText.innerText = `Пост не должен содержать более ${limitTextPost} символов`
+//             addPostBtnNode.disabled = true;
+//         } else {
+//             validationMessagePostText.className = 'validationMessagePostText';
+//             addPostBtnNode.disabled = false;
+//         }
+//     });
+// }
+
+// validateText();
+
+inputTitleNode.addEventListener('input', validation);
+
+
+inputTextNode.addEventListener('input', validation);
+
+function validation() {
+    const titleLength = inputTitleNode.value.length;
+    const textLength = inputTextNode.value.length;
+
     resultTitlePost.textContent = 0 + '/' + limitTitlePost;
+    resultTitlePost.textContent = titleLength + '/' + limitTitlePost;
 
-    inputTitleNode.addEventListener('input', function(event) {
-        const presentValue = event.target.value;
-        const charactersText = presentValue.length;
-
-        resultTitlePost.textContent = charactersText + '/' + limitTitlePost;
-
-        if (charactersText > limitTitlePost) {
-            validationMessagePostTitle.className = 'validationMessagePostTitle_active';
-            validationMessagePostTitle.innerText = `Заголовок не должен превышать ${limitTitlePost} символов`;
-            addPostBtnNode.disabled = true;
-        } else {
-            validationMessagePostTitle.className = 'validationMessagePostTitle';
-            addPostBtnNode.disabled = false;
-        }
-    });
-}
-
-validateTitle();
-
-function validateText() {
     resultTextPost.textContent = 0 + '/' + limitTextPost;
+    resultTextPost.textContent = textLength + '/' + limitTextPost;
 
-    inputTextNode.addEventListener('input', function(event) {
-        const presentValue = event.target.value;
-        const charactersText = presentValue.length;
+    if (titleLength > limitTitlePost) {
+        validationMessage.className = 'validationMessage_active';
+        validationMessage.innerText = `Заголовок не должен превышать ${limitTitlePost} символов`;
+        addPostBtnNode.disabled = true;
+        return;
+    }
+    
+    validationMessage.className = 'validationMessage';
 
-        resultTextPost.textContent = charactersText + '/' + limitTextPost;
+    if (textLength > limitTextPost ) {
+        validationMessage.className = 'validationMessage_active';
+        validationMessage.innerText = `Пост не должен превышать ${limitTextPost} символов`
+        addPostBtnNode.disabled = true;
+        return;
+    }
 
-        if (charactersText > limitTextPost ) {
-            validationMessagePostText.className = 'validationMessagePostText_active';
-            validationMessagePostText.innerText = `Пост не должен содержать более ${limitTextPost} символов`
-            addPostBtnNode.disabled = true;
-        } else {
-            validationMessagePostText.className = 'validationMessagePostText';
-            addPostBtnNode.disabled = false;
-        }
-    });
+    validationMessage.className = 'validationMessage';
+    addPostBtnNode.disabled = false;
 }
 
-validateText();
+
 
 function getPostFromUser() {
     const title = inputTitleNode.value;
     const text = inputTextNode.value;
 
     if (title, text == '') {
+        addPostBtnNode.disabled = true;
         return;
     }
 

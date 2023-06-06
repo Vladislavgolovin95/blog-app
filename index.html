@@ -21,6 +21,7 @@
                 cols="1"
                 spellcheck="true"
                 placeholder="Заголовок"
+                tabindex="1"
             ></textarea>
             <p id="resultTitlePost" class="resultTitlePost"> </p>
 
@@ -31,12 +32,16 @@
                 cols="1"
                 spellcheck="true"
                 placeholder="Напиши пост"
+                tabindex="2"
             ></textarea>
             <p id="resultTextPost" class="resultTextPost"> </p>
-            <button id="addPostBtn" class="addPostBtn">Опубликовать</button>
-            <div id="validationMessagePostTitle" class="validationMessagePostTitle">
-            </div>
-            <div id="validationMessagePostText" class="validationMessagePostText"></div>
+            <button 
+                id="addPostBtn" 
+                class="addPostBtn" 
+                tabindex="3">
+                Опубликовать
+            </button>
+            <div id="validationMessage" class="validationMessage"></div>
         </div>
         <div class="ribbon">
         <h2>Лента</h2>
