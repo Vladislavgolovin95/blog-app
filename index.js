@@ -7,8 +7,8 @@ const validationMessagePostText = document.getElementById('validationMessagePost
 const resultTitlePost = document.getElementById('resultTitlePost');
 const resultTextPost = document.getElementById('resultTextPost');
 
-const limitTitlePost = 5;
-const limitTextPost = 10;
+const limitTitlePost = 100;
+const limitTextPost = 200;
 
 
 const posts = [];
@@ -18,50 +18,6 @@ addPostBtnNode.addEventListener('click', function() {
     addPost(postFromUser);
     renderPosts();
 });
-
-// function validateTitle() {
-//     resultTitlePost.textContent = 0 + '/' + limitTitlePost;
-
-//     inputTitleNode.addEventListener('input', function(event) {
-//         const presentValue = event.target.value;
-//         const charactersText = presentValue.length;
-
-//         resultTitlePost.textContent = charactersText + '/' + limitTitlePost;
-
-//         if (charactersText > limitTitlePost) {
-//             validationMessagePostTitle.className = 'validationMessagePostTitle_active';
-//             validationMessagePostTitle.innerText = `Заголовок не должен превышать ${limitTitlePost} символов`;
-//             addPostBtnNode.disabled = true;
-//         } else {
-//             validationMessagePostTitle.className = 'validationMessagePostTitle';
-//             addPostBtnNode.disabled = false;
-//         }
-//     });
-// }
-
-// validateTitle();
-
-// function validateText() {
-//     resultTextPost.textContent = 0 + '/' + limitTextPost;
-
-//     inputTextNode.addEventListener('input', function(event) {
-//         const presentValue = event.target.value;
-//         const charactersText = presentValue.length;
-
-//         resultTextPost.textContent = charactersText + '/' + limitTextPost;
-
-//         if (charactersText > limitTextPost ) {
-//             validationMessagePostText.className = 'validationMessagePostText_active';
-//             validationMessagePostText.innerText = `Пост не должен содержать более ${limitTextPost} символов`
-//             addPostBtnNode.disabled = true;
-//         } else {
-//             validationMessagePostText.className = 'validationMessagePostText';
-//             addPostBtnNode.disabled = false;
-//         }
-//     });
-// }
-
-// validateText();
 
 inputTitleNode.addEventListener('input', validation);
 

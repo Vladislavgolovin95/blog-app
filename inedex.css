@@ -17,7 +17,7 @@ h2 {
 textarea {
     font-size: 32px;
     line-height: 39px;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .blog {
