@@ -22,8 +22,9 @@ textarea {
 
 .blog {
     margin: 100px auto;
-    max-width: 1100px;
+    width: 1100px;
     height: 700px;
+    padding: 30px;
     display: flex;
     flex-direction: row;
     gap: 100px;
@@ -49,7 +50,7 @@ textarea {
 }
 .post__text {
     display: block;
-    margin:30px 0 30px;
+    margin: 30px 0 30px;
     height: 100%;
     padding: 10px;
     resize: none;
@@ -147,14 +148,14 @@ textarea {
 }
     .post__text_title {
         margin-bottom: 30px;
-        width: 100%;
+        width: auto;
     }
     .resultTitlePost {
         margin-top: -25px;
     }
     .post__text {
         margin-bottom: 30px;
-        width: 100%;
+        width: auto;
         padding: 5px;
     }
     .addPostBtn {
